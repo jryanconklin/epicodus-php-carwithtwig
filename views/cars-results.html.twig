@@ -1,0 +1,25 @@
+
+<html>
+    <head>
+        <title>Car Results</title>
+    </head>
+    <body>
+        <p>
+            You have results!
+        </p>
+        {% if cars is not empty %}
+        <ul>
+            {% for car in cars %}
+                <li>
+                    <p> Car: {{car.getMake}} </p>
+                    <p> Price: {{car.getPrice}} </p>
+                    <p> Price: {{car.getColor}} </p>
+                    <p> Miles: {{car.getYear}} </p>
+                </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+            <p> No cars matching your search.</p>
+        {% endif %}
+    </body>
+</html>
